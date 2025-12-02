@@ -1,172 +1,180 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dylan Brehat Boutique</title>
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>k1ng steal — Boutique Steal a Brainrot</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: #0d0d14;
-      color: #f5f5f5;
+    :root{
+      --bg:#0b0b0f; --card:#111217; --accent:#00eaff; --muted:#9aa0a6; --glass: rgba(255,255,255,0.03);
+      --radius:12px; --maxw:1200px;
     }
-
-    header {
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
-                  url('https://wallpaperaccess.com/full/fortnite-og-1.jpg') center/cover no-repeat;
-      padding: 80px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 42px;
-      font-weight: bold;
-      color: #00eaff;
-      text-shadow: 0 0 15px #00eaff;
-    }
-
-    .section {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: auto;
-      text-align: center;
-    }
-
-    .section h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
-      color: #00eaff;
-      text-shadow: 0 0 10px #00eaff55;
-    }
-
-    .offers {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px;
-    }
-
-    .card {
-      background: #17171f;
-      border: 2px solid #00eaff;
-      border-radius: 14px;
-      padding: 25px;
-      width: 280px;
-      box-shadow: 0 0 15px #00eaff55;
-      transition: transform 0.3s;
-    }
-
-    .card:hover {
-      transform: scale(1.05);
-    }
-
-    .card img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 15px;
-    }
-
-    .card h3 {
-      margin: 10px 0;
-      font-size: 22px;
-      color: #00eaff;
-    }
-
-    .price {
-      font-size: 20px;
-      margin: 10px 0;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 20px;
-      background: #00eaff;
-      color: #000;
-      font-weight: bold;
-      border-radius: 10px;
-      text-decoration: none;
-      font-size: 18px;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #00cce0;
-    }
-
-    .banner {
-      margin: 60px 0;
-    }
-
-    .banner img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 0 20px #000;
-    }
-
-    footer {
-      background: #111;
-      padding: 30px;
-      text-align: center;
-      border-top: 2px solid #00eaff;
-    }
-
-    footer p {
-      color: #aaa;
-      font-size: 14px;
-    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:linear-gradient(180deg,var(--bg),#060607);color:#eef2f5;-webkit-font-smoothing:antialiased}
+    header{padding:40px 20px;text-align:center;background:linear-gradient(180deg,rgba(0,0,0,0.35),transparent)}
+    .brand{font-size:34px;color:var(--accent);letter-spacing:1px;font-weight:800}
+    .tag{color:var(--muted);margin-top:6px}
+    nav{margin-top:18px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+    nav a{color:#cfeff6;text-decoration:none;padding:8px 14px;border-radius:999px;border:1px solid transparent;font-size:14px}
+    nav a:hover{background:rgba(0,234,255,0.06);border-color:rgba(0,234,255,0.12)}
+    .container{max-width:var(--maxw);margin:36px auto;padding:0 18px}
+    .hero{display:flex;gap:24px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+    .hero-left{max-width:640px}
+    .hero h1{margin:0;font-size:36px;color:var(--accent);text-transform:uppercase;letter-spacing:1px}
+    .hero p{color:var(--muted);margin:12px 0 18px;line-height:1.5}
+    .cta{display:inline-flex;gap:10px;flex-wrap:wrap}
+    .btn{background:var(--accent);color:#001;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+    .hero-right{min-width:260px;border-radius:14px;overflow:hidden;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:12px}
+    .banner-img{width:100%;height:160px;background:linear-gradient(90deg,#071018,#0b0b12);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.06);font-size:14px}
+    .section{margin-top:48px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px}
+    .card{background:var(--card);border-radius:var(--radius);padding:14px;border:1px solid rgba(0,234,255,0.04);box-shadow:0 6px 18px rgba(0,0,0,0.6);transition:transform .18s}
+    .card:hover{transform:translateY(-6px)}
+    .card img{width:100%;height:140px;object-fit:cover;border-radius:10px;background:var(--glass)}
+    .card h3{margin:10px 0 6px;color:var(--accent);font-size:18px}
+    .card p{margin:0;color:var(--muted);font-size:13px;min-height:36px}
+    .price{margin-top:10px;font-weight:700;color:#fff}
+    .filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+    .pill{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.02);color:var(--muted);font-size:13px;border:1px solid rgba(255,255,255,0.02)}
+    .kingpass{display:flex;gap:18px;align-items:center;padding:18px;border-radius:12px;background:linear-gradient(90deg,rgba(0,234,255,0.03),transparent);border:1px solid rgba(0,234,255,0.06)}
+    .video-wrap{background:var(--card);padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+    .contact-card{background:var(--card);padding:16px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
+    footer{margin-top:60px;padding:28px 18px;text-align:center;color:var(--muted);border-top:1px solid rgba(255,255,255,0.03)}
+    input,textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#fff}
+    label{display:block;margin-bottom:6px;color:var(--muted);font-size:13px}
+    .small{font-size:13px;color:var(--muted)}
+    @media(max-width:720px){.hero{flex-direction:column}.hero-right{width:100%}}
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Dylan Brehat Boutique</h1>
-    <p>Découvrez nos offres exclusives 🎄</p>
+    <div class="brand">k1ng steal</div>
+    <div class="tag">Boutique et tutoriels dédiés à Steal a Brainrot</div>
+    <nav>
+      <a href="#accueil">Accueil</a>
+      <a href="#offres">Offres</a><a href="#kingpass">King Pass</a>
+      <a href="#tutoriel">Tutoriel</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <!-- Bannière entre sections -->
-  <div class="banner">
-    <img src="https://wallpaperaccess.com/full/fortnite-og-2.jpg" alt="Fortnite OG Banner">
-  </div>
-
-  <div class="section">
-    <h2>Nos Skins de Noël</h2>
-    <div class="offers">
-      <div class="card">
-        <img src="https://wallpaperaccess.com/full/fortnite-og-3.jpg" alt="Skin Noël 1">
-        <h3>Skin Noël #1</h3>
-        <p class="price">2,00 €</p>
-        <a class="btn" href="#">Acheter</a>
+  <main class="container" id="accueil">
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Steal a Brainrot — boutique et tutoriels</h1>
+        <p>Site dédié aux packs numériques, visuels et guides pour Steal a Brainrot. Design sombre, navigation simple et expérience mobile optimisée. Le site propose uniquement des contenus et services légaux : packs visuels, illustrations, guides et abonnements. Aucune vente de comptes n'est proposée.</p>
+        <div class="cta">
+          <a class="btn" href="#offres">Voir les offres</a>
+          <a class="btn ghost" href="#tutoriel">Regarder le tutoriel</a>
+        </div>
       </div>
-      <div class="card">
-        <img src="https://wallpaperaccess.com/full/fortnite-og-4.jpg" alt="Skin Noël 2">
-        <h3>Skin Noël #2</h3>
-        <p class="price">2,50 €</p>
-        <a class="btn" href="#">Acheter</a>
+      <div class="hero-right">
+        <div class="banner-img">Bannière — remplacez par votre visuel</div>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <!-- Bannière entre sections -->
-  <div class="banner">
-    <img src="https://wallpaperaccess.com/full/fortnite-og-5.jpg" alt="Fortnite OG Banner 2">
-  </div>
+    <section class="section" id="offres">
+      <h2 style="color:var(--accent)">Offres</h2>
+      <div class="filters">
+        <div class="pill">Tous</div>
+        <div class="pill">Nouveautés</div>
+        <div class="pill">Sélection</div>
+      </div>
 
-  <div class="section">
-    <h2>King Pass</h2>
-    <div class="card" style="margin:auto;">
-      <img src="https://wallpaperaccess.com/full/fortnite-og-6.jpg" alt="King Pass">
-      <h3>King Pass</h3>
-      <p class="price">0,50 € / mois</p>
-      <p>✔ Réductions sur toutes les offres<br>✔ Bonus exclusifs<br>✔ Accès anticipé</p>
-      <a class="btn" href="#">S’abonner</a>
-    </div>
-  </div>
+      <div class="grid">
+        <!-- 30 emplacements produits (placeholders) -->
+        <!-- Copiez-collez et remplacez src="#" et textes par tes contenus légaux -->
+        <div class="card"><img src="#" alt="Pack 01"><h3>Pack Visuel 01</h3><p>Description courte du pack visuel ou du contenu numérique.</p><div class="price">2,00 €</div></div>
+        <div class="card"><img src="#" alt="Pack 02"><h3>Pack Visuel 02</h3><p>Description courte du pack visuel ou du contenu numérique.</p><div class="price">1,50 €</div></div>
+        <div class="card"><img src="#" alt="Pack 03"><h3>Pack Visuel 03</h3><p>Description courte du pack visuel ou du contenu numérique.</p><div class="price">2,50 €</div></div>
+        <div class="card"><img src="#" alt="Pack 04"><h3>Pack Visuel 04</h3><p>Description courte du pack visuel ou du contenu numérique.</p><div class="price">1,00 €</div></div>
+        <div class="card"><img src="#" alt="Pack 05"><h3>Pack Visuel 05</h3><p>Description courte du pack visuel ou du contenu numérique.</p><div class="price">3,00 €</div></div>
+        <div class="card"><img src="#" alt="Pack 06"><h3>Pack Visuel 06</h3><p>Description courte du pack visuel ou du contenu numérique.</p><div class="price">2,00 €</div></div>
+        <div class="card"><img src="#" alt="Pack 07"><h3>Pack Visuel 07</h3><p>Description courte du pack visuel ou du contenu numérique.</p><div class="price">1,80 €</div></div>
+        <div class="card"><img src="#" alt="Pack 08"><h3>Pack Visuel 08</h3><p>Description courte du pack visuel ou du contenu numérique.</p><div class="price">2,20 €</div></div>
+        <div class="card"><img src="#" alt="Pack 09"><h3>Pack Visuel 09</h3><p>Description courte du pack visuel ou du contenu numérique.</p><div class="price">1,20 €</div></div>
+        <div class="card"><img src="#" alt="Pack 10"><h3>Pack Visuel 10</h3><p>Description courte du pack visuel ou du contenu numérique.</p><div class="price">2,75 €</div></div>
+        <div class="card"><img src="#" alt="Pack 11"><h3>Pack Visuel 11</h3><p>Description courte du pack visuel ou du contenu numérique.</p><div class="price">1,90 €</div></div>
+        <div class="card"><img src="#" alt="Pack 12"><h3>Pack Visuel 12</h3><p>Description courte du pack visuel ou du contenu numérique.</p><div class="price">2,10 €</div></div>
+        <div class="card"><img src="#" alt="Pack 13"><h3>Pack Visuel 13</h3><p>Description courte du pack visuel ou du contenu numérique.</p><div class="price">1,60 €</div></div>
+        <div class="card"><img src="#" alt="Pack 14"><h3>Pack Visuel 14</h3><p>Description courte du pack visuel ou du contenu numérique.</p><div class="price">2,40 €</div></div>
+        <div class="card"><img src="#" alt="Pack 15"><h3>Pack Visuel 15</h3><p>Description courte du pack visuel ou du contenu numérique.</p><div class="price">3,20 €</div></div><div class="card"><img src="#" alt="Pack 16"><h3>Pack Visuel 16</h3><p>Description courte du pack visuel ou du contenu numérique.</p><div class="price">1,30 €</div></div>
+        <div class="card"><img src="#" alt="Pack 17"><h3>Pack Visuel 17</h3><p>Description courte du pack visuel ou du contenu numérique.</p><div class="price">2,60 €</div></div>
+        <div class="card"><img src="#" alt="Pack 18"><h3>Pack Visuel 18</h3><p>Description courte du pack visuel ou du contenu numérique.</p><div class="price">1,70 €</div></div>
+        <div class="card"><img src="#" alt="Pack 19"><h3>Pack Visuel 19</h3><p>Description courte du pack visuel ou du contenu numérique.</p><div class="price">2,80 €</div></div>
+        <div class="card"><img src="#" alt="Pack 20"><h3>Pack Visuel 20</h3><p>Description courte du pack visuel ou du contenu numérique.</p><div class="price">1,40 €</div></div>
+        <div class="card"><img src="#" alt="Pack 21"><h3>Pack Visuel 21</h3><p>Description courte du pack visuel ou du contenu numérique.</p><div class="price">2,05 €</div></div>
+        <div class="card"><img src="#" alt="Pack 22"><h3>Pack Visuel 22</h3><p>Description courte du pack visuel ou du contenu numérique.</p><div class="price">1,95 €</div></div>
+        <div class="card"><img src="#" alt="Pack 23"><h3>Pack Visuel 23</h3><p>Description courte du pack visuel ou du contenu numérique.</p><div class="price">2,15 €</div></div>
+        <div class="card"><img src="#" alt="Pack 24"><h3>Pack Visuel 24</h3><p>Description courte du pack visuel ou du contenu numérique.</p><div class="price">1,10 €</div></div>
+        <div class="card"><img src="#" alt="Pack 25"><h3>Pack Visuel 25</h3><p>Description courte du pack visuel ou du contenu numérique.</p><div class="price">2,90 €</div></div>
+        <div class="card"><img src="#" alt="Pack 26"><h3>Pack Visuel 26</h3><p>Description courte du pack visuel ou du contenu numérique.</p><div class="price">1,75 €</div></div>
+        <div class="card"><img src="#" alt="Pack 27"><h3>Pack Visuel 27</h3><p>Description courte du pack visuel ou du contenu numérique.</p><div class="price">2,35 €</div></div>
+        <div class="card"><img src="#" alt="Pack 28"><h3>Pack Visuel 28</h3><p>Description courte du pack visuel ou du contenu numérique.</p><div class="price">1,25 €</div></div>
+        <div class="card"><img src="#" alt="Pack 29"><h3>Pack Visuel 29</h3><p>Description courte du pack visuel ou du contenu numérique.</p><div class="price">3,10 €</div></div>
+        <div class="card"><img src="#" alt="Pack 30"><h3>Pack Visuel 30</h3><p>Description courte du pack visuel ou du contenu numérique.</p><div class="price">2,00 €</div></div>
+      </div>
+    </section>
+
+    <section class="section" id="kingpass">
+      <h2 style="color:var(--accent)">King Pass</h2>
+      <div class="kingpass">
+        <div style="flex:1">
+          <h3 style="margin:0;color:#fff">King Pass</h3>
+          <p style="color:var(--muted);margin:8px 0">Abonnement donnant accès à des réductions, bonus et accès anticipé aux nouveaux packs et visuels.</p>
+          <div style="font-weight:700;color:#fff">0,50 € / mois</div>
+        </div>
+        <div style="min-width:160px;text-align:right">
+          <a class="btn" href="#contact">S’abonner</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="tutoriel">
+      <h2 style="color:var(--accent)">Tutoriel — Comment profiter</h2>
+      <div class="video-wrap" style="max-width:900px;margin:18px auto;border-radius:12px">
+        <div style="background:#000;border-radius:8px;overflow:hidden">
+          <!-- Remplacez src par l'URL embed de votre vidéo -->
+          <iframe style="width:100%;height:480px;border:0" src="about:blank" title="Tutoriel vidéo"></iframe>
+        </div>
+        <p class="small" style="margin-top:10px">Collez votre lien vidéo dans l'iframe pour afficher le tutoriel.</p>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <h2 style="color:var(--accent)">À propos & Contact</h2><p style="color:var(--muted)">k1ng steal propose des packs numériques, visuels et tutoriels dédiés à Steal a Brainrot. Le site présente uniquement des contenus et services légaux et n'offre pas la vente de comptes. Pour contact : indique ton pseudo Discord et ton message ci‑dessous.</p>
+
+      <div class="contact-card" style="max-width:640px;margin:18px auto">
+        <form id="contactForm" onsubmit="event.preventDefault(); alert('Formulaire simulé : implémentez votre backend');">
+          <label for="name">Pseudo / Nom</label>
+          <input id="name" name="name" type="text" placeholder="Ton pseudo Discord" required />
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="email@exemple.com" required />
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Ton message" required></textarea>
+          <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+            <button class="btn" type="submit">Envoyer</button>
+            <a class="btn ghost" href="#">Rejoindre Discord</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2025 Dylan Brehat Boutique — Tous droits réservés</p>
+    <div>© k1ng steal — Tous droits réservés</div>
+    <div class="small" style="margin-top:8px">Site dédié aux packs numériques, visuels et tutoriels pour Steal a Brainrot. Aucune vente de comptes n'est proposée.</div>
   </footer>
 
+  <script>
+    // Script minimal pour interactions visuelles (filtre simple)
+    document.querySelectorAll('.pill').forEach(p => {
+      p.addEventListener('click', () => {
+        document.querySelectorAll('.pill').forEach(x => x.style.borderColor = 'rgba(255,255,255,0.02)');
+        p.style.borderColor = 'rgba(0,234,255,0.18)';
+      });
+    });
+  </script>
 </body>
 </html>
